@@ -1,0 +1,15 @@
+# Java / Maven / Gradle
+target/
+*.class
+*.jar
+
+# Node / front-end
+node_modules/
+
+# IDEs
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

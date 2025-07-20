@@ -1,0 +1,18 @@
+server:
+  port: 9093
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: USER-SERVICE
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/restaurantdb  # JDBC URL for your database
+    username: newuser  # Replace with your database username
+    password: 1111  # Replace with your database password
+    driver-class-name: com.mysql.cj.jdbc.Driver  # JDBC driver class name
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect

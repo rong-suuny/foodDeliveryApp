@@ -1,0 +1,53 @@
+server:
+  port: 9091  # The port on which your application will run (default is 8080)
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: restaurantApp  # The name of your Spring Boot application
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/restaurantdb  # JDBC URL for your database
+    username: newuser  # Replace with your database username
+    password: 1111  # Replace with your database password
+    driver-class-name: com.mysql.cj.jdbc.Driver  # JDBC driver class name
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Automatically update the database schema (use 'create' or 'create-drop' for development)
+    show-sql: true  # Show SQL statements in the logs (helpful for debugging)
+    database-platform: org.hibernate.dialect.MySQL8Dialect  # Use the correct dialect for your database
+
+  # If using an embedded server like Tomcat, you can configure the port here
+
+# Other optional configurations
+
+# Enable CORS for specific endpoints
+#cors:
+#  allowed-origins: "http://localhost:3000"  # Replace with the actual domain if different
+#  allowed-methods: GET, POST, PUT, DELETE  # Specify which HTTP methods are allowed
+
+# Security configurations (if applicable)
+#security:
+#  basic:
+#    enabled: true  # Enable or disable basic authentication
+#  user:
+#    name: admin  # Default admin username
+#    password: admin  # Default admin password (change this to a more secure password)
+
+# Logging configurations
+#logging:
+#  level:
+#    root: INFO  # Set the default logging level
+#    com.yourpackage: DEBUG  # Set the logging level for your package
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"  # Customize the log output pattern
+#
+## Custom properties for your application
+#custom:
+#  property1: value1  # Replace with your custom properties
+#  property2: value2
