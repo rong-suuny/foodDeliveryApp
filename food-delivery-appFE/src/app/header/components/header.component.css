@@ -1,0 +1,49 @@
+.header {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between; /*Distributes space between logo and user details*/
+  align-items: center; /* Vertically centers items */
+  padding: 15px 20px; /* Adjust padding as needed */
+  border-bottom: 1px solid #ddd; /* Optional bottom border */
+}
+
+.header-logo {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 5;
+  margin-left: 120px; /* Add margin to push the logo away from the left edge */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  margin-right: 150px; /* Space between avatar and username */
+}
+
+.username {
+  font-size: 20px;
+}
+
+.user-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40%; /* Creates a circle avatar */
+  object-fit: cover;
+  margin-right: 60px; /* Space between avatar and username */
+}
+/* Optional: Make the header responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start;
+  }
+  .header-logo {
+    margin-bottom: 10px; /* Space below the logo */
+  }
+}
